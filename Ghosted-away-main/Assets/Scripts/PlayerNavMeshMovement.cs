@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerNavMeshMovement : MonoBehaviour
 {
-    private UnityEngine.AI.NavMeshAgent navMeshAgent; // Reference to the NavMeshAgent component
+    public float movementSpeed = 5f; // Adjustable movement speed
+
+    private NavMeshAgent navMeshAgent; // Reference to the NavMeshAgent component
 
     void Start()
     {
-        navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>(); // Get reference to the NavMeshAgent component attached to this GameObject
+        navMeshAgent = GetComponent<NavMeshAgent>(); // Get reference to the NavMeshAgent component attached to this GameObject
     }
 
     void Update()
@@ -21,7 +24,7 @@ public class PlayerNavMeshMovement : MonoBehaviour
             RaycastHit hit;
 
             // Check if the ray hits the NavMesh
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, UnityEngine.AI.NavMesh.AllAreas))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, NavMesh.AllAreas))
             {
                 // Move the player to the clicked position
                 navMeshAgent.SetDestination(hit.point);
@@ -39,7 +42,7 @@ public class PlayerNavMeshMovement : MonoBehaviour
         if (movementDirection != Vector3.zero)
         {
             // Calculate the target position based on the current position and movement direction
-            Vector3 targetPosition = transform.position + movementDirection;
+            Vector3 targetPosition = transform.position + movementDirection * movementSpeed * Time.deltaTime;
 
             // Move the player to the target position
             navMeshAgent.SetDestination(targetPosition);
