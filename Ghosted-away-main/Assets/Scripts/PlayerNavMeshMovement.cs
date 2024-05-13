@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class PlayerNavMeshMovement : MonoBehaviour
 {
-    public float movementSpeed = 5f;
+    public float movementSpeed = 30f;
     private NavMeshAgent navMeshAgent;
 
     void Start()
