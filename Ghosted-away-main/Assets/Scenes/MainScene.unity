@@ -194,7 +194,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4078855156467671687, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: gameEnding
@@ -1314,7 +1314,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4257817316179491928, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: gameEnding
@@ -1552,7 +1552,7 @@ PrefabInstance:
     - target: {fileID: 7447163605590411544, guid: 907fd825e3988774caab4234b943bf44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.991131
+      value: -5.336
       objectReference: {fileID: 0}
     - target: {fileID: 7447163605590411544, guid: 907fd825e3988774caab4234b943bf44,
         type: 3}
@@ -1632,6 +1632,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 580298184}
+    - targetCorrespondingSourceObject: {fileID: 7447163605589988728, guid: 907fd825e3988774caab4234b943bf44,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 580298186}
   m_SourcePrefab: {fileID: 100100000, guid: 907fd825e3988774caab4234b943bf44, type: 3}
 --- !u!1 &580298173 stripped
 GameObject:
@@ -1834,6 +1838,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 580298172}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &580298186
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580298173}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &675583418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 186551185373456319, guid: 549c69af39b84624b8a053537c407def,
@@ -2073,7 +2098,7 @@ Transform:
   m_GameObject: {fileID: 805581756}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4123724, y: 0, z: 0, w: 0.91101533}
-  m_LocalPosition: {x: -9.776, y: 6.0738416, z: -8.270315}
+  m_LocalPosition: {x: -9.776, y: 6.0738416, z: -10.615184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2541,7 +2566,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4078855156467671687, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: gameEnding
@@ -2920,7 +2945,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4257817316179491928, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: gameEnding
@@ -3216,7 +3241,7 @@ Transform:
   m_GameObject: {fileID: 1527396175}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4123724, y: -0, z: -0, w: 0.91101533}
-  m_LocalPosition: {x: -9.776, y: 6.0738416, z: -8.270315}
+  m_LocalPosition: {x: -9.776, y: 6.0738416, z: -10.615184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3695,7 +3720,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4257817316179491928, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: gameEnding
@@ -4199,7 +4224,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4078855156467671687, guid: 39d0626ce76d1884da050e0e509a5540,
         type: 3}
       propertyPath: gameEnding
@@ -4270,12 +4295,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39d0626ce76d1884da050e0e509a5540, type: 3}
---- !u!4 &2008973354732098957 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2008973354732098957, guid: e58a8494f35e17f45ba5bbffdfb92517,
-    type: 3}
-  m_PrefabInstance: {fileID: 4012380625681614536}
-  m_PrefabAsset: {fileID: 0}
 --- !u!225 &3195947575264462198 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 3195947575264462198, guid: 25a9b51216ac79a4d8058aa58c2d6889,
@@ -5402,7 +5421,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2008973354732098957}
+      objectReference: {fileID: 580298185}
     - target: {fileID: 4257817316179491928, guid: abeb186619cc7e6419cb81e1e4dfa162,
         type: 3}
       propertyPath: gameEnding
