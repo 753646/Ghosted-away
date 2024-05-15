@@ -15,17 +15,6 @@ public class PlayerNavMeshMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, NavMesh.AllAreas))
-            {
-                navMeshAgent.SetDestination(hit.point);
-            }
-        }
-
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 movementDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;

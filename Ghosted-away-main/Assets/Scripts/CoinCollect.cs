@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
-    private int coinCount = 0;
+    public int coinCount = 0;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,4 +20,3 @@ public class CoinCollect : MonoBehaviour
         Destroy(coin);
     }
 }
-
