@@ -18,16 +18,13 @@ public class PlayerNavMeshMovement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Vector3 movementDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
-        if (movementDirection != Vector3.zero)
+        if (Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f)
         {
+            Vector3 movementDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
             Vector3 targetPosition = transform.position + movementDirection * movementSpeed * Time.deltaTime;
-            if (targetPosition != lastTargetPosition)
-            {
-                navMeshAgent.SetDestination(targetPosition);
-                lastTargetPosition = targetPosition;
-            }
+            navMeshAgent.SetDestination(targetPosition);
+            lastTargetPosition = targetPosition;
         }
     }
 }
