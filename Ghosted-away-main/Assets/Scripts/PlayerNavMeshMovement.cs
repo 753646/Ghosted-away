@@ -7,6 +7,7 @@ public class PlayerNavMeshMovement : MonoBehaviour
 {
     public float movementSpeed = 30f;
     private NavMeshAgent navMeshAgent;
+    private Vector3 lastTargetPosition;
 
     void Start()
     {
@@ -22,7 +23,11 @@ public class PlayerNavMeshMovement : MonoBehaviour
         if (movementDirection != Vector3.zero)
         {
             Vector3 targetPosition = transform.position + movementDirection * movementSpeed * Time.deltaTime;
-            navMeshAgent.SetDestination(targetPosition);
+            if (targetPosition != lastTargetPosition)
+            {
+                navMeshAgent.SetDestination(targetPosition);
+                lastTargetPosition = targetPosition;
+            }
         }
     }
 }
