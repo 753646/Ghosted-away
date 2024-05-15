@@ -5,13 +5,13 @@ using UnityEngine;
 public class CoinCollect : MonoBehaviour
 {
     public int coinCount = 0;
-    private bool invincible = false;
-    private bool speedBoost = false;
     private PlayerNavMeshMovement playerMovementScript;
+    private GameEnding gameEndingScript;
 
     private void Start()
     {
         playerMovementScript = GetComponentInChildren<PlayerNavMeshMovement>();
+        gameEndingScript = FindObjectOfType<GameEnding>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,14 +40,21 @@ public class CoinCollect : MonoBehaviour
 
     private void CollectInvincibility()
     {
-        invincible = true;
         Debug.Log("Invincibility collected!");
-        // Add invincibility effects or logic here
+        StartCoroutine(DisableGameEndingForDuration(15f));
+    }
+    private IEnumerator DisableGameEndingForDuration(float duration)
+    {
+        if (gameEndingScript != null)
+        {
+            gameEndingScript.enabled = false;
+            yield return new WaitForSeconds(duration);
+            gameEndingScript.enabled = true;
+        }
     }
 
     private void CollectSpeedBoost()
     {
-        speedBoost = true;
         playerMovementScript.movementSpeed = 50f;
         StartCoroutine(ResetSpeedBoost());
         Debug.Log("Speed boost collected!");
@@ -57,6 +64,5 @@ public class CoinCollect : MonoBehaviour
     {
         yield return new WaitForSeconds(15f);
         playerMovementScript.movementSpeed = 30f;
-        speedBoost = false;
     }
 }
